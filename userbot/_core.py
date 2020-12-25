@@ -8,7 +8,7 @@ from userbot import ALIVE_NAME
 from userbot import bot
 
 DELETE_TIMEOUT = 5
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Hell User"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "arceus User"
 
 
 @bot.on(admin_cmd(pattern=r"send (?P<shortname>\w+)", outgoing=True))
@@ -55,7 +55,7 @@ async def install(event):
                 shortname = path1.stem
                 load_module(shortname.replace(".py", ""))
                 await event.edit(
-                    "Plugin successfully installed\n @HellBot_Official `{}`".format(
+                    "Plugin successfully installed\n @ArceusTheuserBot `{}`".format(
                         os.path.basename(downloaded_file_name)
                     )
                 )

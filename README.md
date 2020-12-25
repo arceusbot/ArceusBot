@@ -13,7 +13,7 @@
 
 ## Join our Support Channel and Group regrading bug fixes
 
-<a href="https://t.me/@ArceusTheuserBot"><img src="https://telegra.ph/file/00d83ccccfb983f76fa22.jpg"></a>
+<a href="https://t.me/ArceusTheuserBot"><img src="https://telegra.ph/file/00d83ccccfb983f76fa22.jpg"></a>
 
 
 
@@ -62,8 +62,35 @@ Fortunately there are no Mandatory vars for the UniBorg Support Config.
 
 
 
+ -[@Kraken_The_BadASS](https://t.me/Kraken_The_BadASS)🔥🔥 For his Powerful HellBot 🔥🔥
+         
 
-   
-   
+
+
+![@Kraken_The_BadASS](https://telegra.ph/file/9e664e427af88e7611bab.jpg)
    
 
+
+
+
+
+
+-[ꜱᴀɴꜱᴋᴀʀɪ ʟᴀᴅᴋᴀ (🇮🇳) #FяєακAямγ](https://t.me/KOI_LADKI_BHN_NHI)🔥 For Marvellous Support 🔥
+
+
+
+
+
+![ꜱᴀɴꜱᴋᴀʀɪ ʟᴀᴅᴋᴀ (🇮🇳) #FяєακAямγ](https://telegra.ph/file/e37a1f20f5b61c14246ae.jpg)
+
+
+
+
+## Special Thanks ♥️   
+   
+-[HellBot] ðŸ”¥ðŸ”¥
+
+
+
+
+![HellBot](https://telegra.ph/file/d19b99ee4377a8e4eb6bb.jpg)

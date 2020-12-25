@@ -60,7 +60,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
     async def on_plug_in_callback_query_handler(event):
         if event.query.user_id == bot.uid:
             await event.edit(
-                "⚜️Hêllẞø† Menu Provider Is now Closed⚜️\n\n      © Hêllẞø† ™"
+                "⚜️ Arceus Menu Provider Is now Closed⚜️\n\n      © Arceus ™"
             )
 
     @tgbot.on(

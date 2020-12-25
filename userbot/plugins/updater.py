@@ -21,7 +21,7 @@ NEW_BOT_UP_DATE_FOUND = (
     "changelog: \n\n{changelog}\n"
     "updating your ArceusBot ..."
 )
-NEW_UP_DATE_FOUND = "New update found for {branch_name}\n" "`updating your Hêllẞø†...`"
+NEW_UP_DATE_FOUND = "New update found for {branch_name}\n" "`updating your ArceusBot...`"
 REPO_REMOTE_NAME = "temponame"
 IFFUCI_ACTIVE_BRANCH_NAME = "master"
 DIFF_MARKER = "HEAD..{remote_name}/{branch_name}"
@@ -136,7 +136,7 @@ def generate_change_log(git_repo, diff_marker):
 async def deploy_start(tgbot, message, refspec, remote):
     await message.edit(RESTARTING_APP)
     await message.edit(
-        "Updated your ArceusBOT successfully sur!!!\nNow type `.ping` after 5 mins to check if I'm on😁🤭😒"
+        "Updated your ArceusBOT successfully sur!!!\nNow type `.ping` after 5 mins to check if I'm on😁🤭"
     )
     await remote.push(refspec=refspec)
     await tgbot.disconnect()

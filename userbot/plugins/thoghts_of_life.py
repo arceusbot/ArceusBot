@@ -2,7 +2,7 @@
 Life Pro Tips
   Syntax: .tip
 by
-  @Deonnn
+  @Mr_Hillarious
 
 """
 

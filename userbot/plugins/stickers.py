@@ -1,3 +1,10 @@
+# Copyright (C) 2019 The Raphielscape Company LLC.
+#
+# Licensed under the Raphielscape Public License, Version 1.c (the "License");
+# you may not use this file except in compliance with the License.
+#
+""" Userbot module for kanging stickers or making new ones. Thanks @Mr_Hillarious"""
+
 import io
 import math
 import random
@@ -13,9 +20,8 @@ from telethon.tl.types import (
     MessageMediaPhoto,
 )
 
-from userbot import CMD_HELP
-from userbot.uniborgConfig import Config
-from userbot.utils import *
+from userbot import CMD_HELP, bot
+from userbot.utils import register
 
 KANGING_STR = [
     "Using Witchery to kang this sticker...",
@@ -30,11 +36,8 @@ KANGING_STR = [
     "Mr.Steal Your Sticker is stealing this sticker... ",
 ]
 
-arceusbot = Config.CUSTOM_STICKER_PACK_NAME
 
-
-@bot.on(admin_cmd(outgoing=True, pattern="kang"))
-@bot.on(sudo_cmd(pattern="kang", allow_sudo=True))
+@register(outgoing=True, pattern="^.kang")
 async def kang(args):
     """ For .kang command, kangs stickers or creates new ones. """
     user = await bot.get_me()
@@ -83,7 +86,7 @@ async def kang(args):
     if photo:
         splat = args.text.split()
         if not emojibypass:
-            emoji = "😎"
+            emoji = "❤"
         pack = 1
         if len(splat) == 3:
             pack = splat[2]  # User sent both
@@ -98,12 +101,8 @@ async def kang(args):
                 # pack
                 emoji = splat[1]
 
-        packname = f"HB_{user.username}_arceusbot_{pack}"
-        packnick = (
-            f"{arceusbot} Vol.{pack}"
-            if hellbot
-            else f"@{user.username}'s arceusbot Vol.{pack}"
-        )
+        packname = f"{user.username}_{pack}"
+        packnick = f"@{user.username}'s_{pack}"
         cmd = "/newpack"
         file = io.BytesIO()
 
@@ -134,12 +133,8 @@ async def kang(args):
                 x = await conv.get_response()
                 while "120" in x.text:
                     pack += 1
-                    packname = f"HB_{user.username}_by_{user.username}_{pack}"
-                    packnick = (
-                        f"{arceusbot} Vol.{pack}"
-                        if hellbot
-                        else f"@{user.username}'s arceusbot Vol.{pack}"
-                    )
+                    packname = f"{user.username}_{pack}"
+                    packnick = f"@{user.username}'s_{pack}"
                     await args.edit(
                         "`Switching to Pack "
                         + str(pack)
@@ -212,7 +207,7 @@ async def kang(args):
                 # Ensure user doesn't get spamming notifications
                 await bot.send_read_acknowledge(conv.chat_id)
         else:
-            await args.edit("`Preparing a new pack....`")
+            await args.edit("`Brewing a new Pack...`")
             async with bot.conversation("Stickers") as conv:
                 await conv.send_message(cmd)
                 await conv.get_response()
@@ -288,27 +283,26 @@ async def resize_photo(photo):
     return image
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="stkrinfo"))
-@bot.on(sudo_cmd(pattern="stkrinfo", allow_sudo=True))
+@register(outgoing=True, pattern="^.stkrinfo$")
 async def get_pack_info(event):
     if not event.is_reply:
-        await eor(event, "`I can't fetch info from black hole!!!`")
+        await event.edit("`I can't fetch info from nothing, can I ?!`")
         return
 
     rep_msg = await event.get_reply_message()
     if not rep_msg.document:
-        await eor(event, "`Reply to a sticker to get the pack details`")
+        await event.edit("`Reply to a sticker to get the pack details`")
         return
 
     try:
         stickerset_attr = rep_msg.document.attributes[1]
-        await eor(event, "`Fetching details of the sticker pack, please wait..`")
+        await event.edit("`Fetching details of the sticker pack, please wait..`")
     except BaseException:
-        await eor(event, "`This is not a sticker. Reply to a sticker.`")
+        await event.edit("`This is not a sticker. Reply to a sticker.`")
         return
 
     if not isinstance(stickerset_attr, DocumentAttributeSticker):
-        await eor(event, "`This is not a sticker. Reply to a sticker.`")
+        await event.edit("`This is not a sticker. Reply to a sticker.`")
         return
 
     get_stickerset = await bot(
@@ -325,15 +319,15 @@ async def get_pack_info(event):
             pack_emojis.append(document_sticker.emoticon)
 
     OUTPUT = (
-        f"🔹 **Sticker Title:** `{get_stickerset.set.title}\n`"
-        f"🔸 **Sticker Short Name:** `{get_stickerset.set.short_name}`\n"
-        f"🔹 **Official:** `{get_stickerset.set.official}`\n"
-        f"🔸 **Archived:** `{get_stickerset.set.archived}`\n"
-        f"🔹 **Stickers In Pack:** `{len(get_stickerset.packs)}`\n"
-        f"🔸 **Emojis In Pack:**\n{' '.join(pack_emojis)}"
+        f"**Sticker Title:** `{get_stickerset.set.title}\n`"
+        f"**Sticker Short Name:** `{get_stickerset.set.short_name}`\n"
+        f"**Official:** `{get_stickerset.set.official}`\n"
+        f"**Archived:** `{get_stickerset.set.archived}`\n"
+        f"**Stickers In Pack:** `{len(get_stickerset.packs)}`\n"
+        f"**Emojis In Pack:**\n{' '.join(pack_emojis)}"
     )
 
-    await eor(event, OUTPUT)
+    await event.edit(OUTPUT)
 
 
 CMD_HELP.update(
@@ -343,7 +337,7 @@ CMD_HELP.update(
 \n\n.kang [emoji('s)]\
 \nUsage: Works just like .kang but uses the emoji('s) you picked.\
 \n\n.kang [number]\
-\nUsage: Kang's the sticker/image to the specified pack but uses 😎 as emoji.\
+\nUsage: Kang's the sticker/image to the specified pack but uses 🤔 as emoji.\
 \n\n.kang [emoji('s)] [number]\
 \nUsage: Kang's the sticker/image to the specified pack and uses the emoji('s) you picked.\
 \n\n.stkrinfo\

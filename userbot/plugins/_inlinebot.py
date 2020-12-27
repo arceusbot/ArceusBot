@@ -82,7 +82,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         else:
             reply_pop_up_alert = help_string
         reply_pop_up_alert += "\n Use .unload {} to remove this plugin\n\
-            © Hêllẞø†™".format(
+            © Arceus™".format(
             plugin_name
         )
         try:

@@ -1,4 +1,3 @@
-# credits to @Mr_Hillarious 
 import io
 import os
 
@@ -45,9 +44,9 @@ async def _(event):
                 caption=query,
                 reply_to=reply_to_id,
             )
-            await arcevent.delete()
+            await catevent.delete()
     else:
-        await arcevent.edit(reply)
+        await catevent.edit(reply)
 
 
 @bot.on(admin_cmd(outgoing=True, pattern="glyrics ?(.*)"))
@@ -92,10 +91,10 @@ async def lyrics(lyric):
     except TypeError:
         songs = None
     if songs is None:
-        await arcevent.edit(f"Song **{artist} - {song}** not found!")
+        await catevent.edit(f"Song **{artist} - {song}** not found!")
         return
     if len(songs.lyrics) > 4096:
-        await arcevent.edit("`Lyrics is too big, view the file to see it.`")
+        await catevent.edit("`Lyrics is too big, view the file to see it.`")
         with open("lyrics.txt", "w+") as f:
             f.write(f"Search query: \n{artist} - {song}\n\n{songs.lyrics}")
         await lyric.client.send_file(

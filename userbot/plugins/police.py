@@ -8,7 +8,7 @@ from uniborg.util import admin_cmd
 from userbot import ALIVE_NAME
 
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "GodHackerz User"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Arceus User"
 
 @borg.on(admin_cmd(pattern=r"police"))
 
@@ -37,7 +37,7 @@ async def _(event):
             "🔴🔴🔴⬜⬜⬜🔵🔵🔵\n🔴🔴🔴⬜⬜⬜🔵🔵🔵\n🔴🔴🔴⬜⬜⬜🔵🔵🔵",
             "🔵🔵🔵⬜⬜⬜🔴🔴🔴\n🔵🔵🔵⬜⬜⬜🔴🔴🔴\n🔵🔵🔵⬜⬜⬜🔴🔴🔴",
             "🔴🔴🔴⬜⬜⬜🔵🔵🔵\n🔴🔴🔴⬜⬜⬜🔵🔵🔵\n🔴🔴🔴⬜⬜⬜🔵🔵🔵",
-            "**[God Hackerz Userbot](https://github.com/rohithaditya/Godhackerz-userbot) **Police Service Here**"
+            "**[Arceus Userbot](https://github.com/arceusbot/ArceusBot) **Police Service Here**"
 
  ]
 

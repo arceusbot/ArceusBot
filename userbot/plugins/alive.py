@@ -23,8 +23,8 @@ pm_caption = "** ARCEUS BOT 𝙸𝚂 𝙾𝙽𝙻𝙸𝙽𝙴**\n\n"
 pm_caption += "**Yes Surr, Am Alive And Systems Are Working Perfectly As It Should Be...**\n\n"
 pm_caption += "✘ About My System ✘\n\n"
 pm_caption += "➾ **ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ** ☞ 1.17.5\n"
-pm_caption += "➾ **ꜱᴜᴘᴘᴏʀᴛ ᴄʜᴀɴɴᴇʟ** ☞ [ᴊᴏɪɴ](https://t.me/ArceusTheuserBot)\n"
-pm_caption += "🔥CREATOR🔥    : [Nub Here](https://t.me/Mr_Hillarious)\n\n"
+pm_caption += "➾ **ꜱᴜᴘᴘᴏʀᴛ ᴄʜᴀɴɴᴇʟ** ☞ [ᴊᴏɪɴ](https://t.me/ArceususerBot)\n"
+pm_caption += "🔥CREATOR🔥    : [Nub Here](https://t.me/Itz_Mr_Hillarious)\n\n"
 pm_caption += "    [✨REPO✨](https://github.com/arceusbot/ArceusBot)🔹 [📜License📜](https://github.com/arceusbot/ArceusBot/blob/main/LICENSE)"
 
 

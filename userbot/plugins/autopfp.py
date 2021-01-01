@@ -1,4 +1,4 @@
-# Made By @Nihinivi Keep Credits If You Are Goanna Kang This Lol
+# Made By @Itz_Mr_Hillarious 
 # And Thanks To The Creator Of Autopic This Script Was Made from Snippets From That Script
 # Usage .gamerpfp  Im Not Responsible For Any Ban caused By This
 import asyncio

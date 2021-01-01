@@ -7,9 +7,9 @@ from telethon.tl import functions
 from userbot import ALIVE_NAME, BIO_MSG, CMD_HELP
 from userbot.utils import admin_cmd, edit_or_reply
 
-DEFAULTUSERBIO = str(BIO_MSG) if BIO_MSG else "Black Lightning"
+DEFAULTUSERBIO = str(BIO_MSG) if BIO_MSG else "Arceus Bot"
 DEL_TIME_OUT = 60
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Black Lightning"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Arceus Bot"
 
 
 @bot.on(admin_cmd(pattern="autoname"))  # pylint:disable=E0602
